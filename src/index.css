@@ -1,0 +1,49 @@
+@tailwind  base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+.glassy {
+  @apply bg-opacity-20 backdrop-blur-lg bg-gray-800 border border-gray-700;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
+
+.star {
+  @apply absolute bg-white rounded-full;
+  animation: twinkle ease infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.animate-shooting-star {
+  animation: shootingStar 5s linear infinite;
+}
+
+@keyframes shootingStar {
+  0% { transform: translateX(-100%) translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(200%) translateY(200%); opacity: 0; }
+}
+
+.skill-item {
+  @apply px-4 py-2 rounded-full bg-indigo-900 bg-opacity-40 text-indigo-200 border border-indigo-700 text-sm font-medium transition-all duration-300;
+}
+
+.skill-item:hover {
+  @apply bg-indigo-800 bg-opacity-70 scale-105 shadow-lg;
+}
+  
